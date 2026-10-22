@@ -36,7 +36,7 @@ import yt_dlp
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 from typing import Optional
-
+from keep_alive import keep_alive
 # ── EXIF / PIL ────────────────────────────────────────────────
 try:
     from PIL import Image
