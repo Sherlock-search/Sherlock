@@ -1,8 +1,9 @@
-[phases.setup]
-nixPkgs = ["python311", "ffmpeg"]
+run = "python 1-hotmail.py"
+entrypoint = "1-hotmail.py"
 
-[phases.install]
-cmds = ["pip install -r requirements.txt"]
+[nix]
+channel = "stable-23_05"
 
-[start]
-cmd = "python 1-hotmail.py"
+[deployment]
+run = ["sh", "-c", "python 1-hotmail.py"]
+deploymentTarget = "cloudrun"
